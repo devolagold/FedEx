@@ -1,11 +1,392 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="assets/flowbite.js"></script>
+    <link rel="icon" href="assets/fedex-logo.svg"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css">
+  </head>
+  <body>
+        <nav class="bg-white border-gray-200 dark:bg-[#4D148C]">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="assets/fedex-logo.svg" class="h-8" alt="Flowbite Logo" />
+            </a>
+            
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul class="flex flex-col normal p-4 md:p-0 mt-4  md:space-x-8 md:flex-row md:mt-0 md:border-0">
+                <!-- <li>
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 font-normal rounded-sm hover:opacity-90 text-white md:border-0 md:p-0 md:w-auto">Shipping <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg></button>
+                    <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                            <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                        </ul>
+                        <div class="py-1">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                        </div>
+                    </div>
+                </li> -->
+
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 normal rounded-sm hover:opacity-90 text-white md:border-0 md:p-0 md:w-auto">Shipping <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                            </svg>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 normal rounded-sm hover:opacity-90 text-white md:border-0 md:p-0 md:w-auto">Tracking <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                            </svg>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 normal rounded-sm hover:opacity-90 text-white md:border-0 md:p-0 md:w-auto">Services <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                            </svg>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 normal rounded-sm hover:opacity-90 text-white md:border-0 md:p-0 md:w-auto">Support <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex">
+                <button type="button" class="text-white normal flex items-center space-x-2 text-sm px-4 py-2 text-center">
+                    <p class="">Sign Up or Log In</p>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_87_16)">
+                        <path d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM7.013 18.256C8.42855 19.3877 10.1877 20.0029 12 20C13.97 20 15.773 19.288 17.167 18.108C16.5157 17.4397 15.7371 16.9089 14.877 16.5468C14.017 16.1847 13.0931 15.9988 12.16 16C11.1926 15.9989 10.2355 16.1989 9.34947 16.5872C8.46343 16.9756 7.66778 17.5439 7.013 18.256V18.256ZM5.616 16.82C6.45645 15.9281 7.47067 15.2177 8.59614 14.7327C9.72161 14.2477 10.9345 13.9984 12.16 14C13.3417 13.9985 14.512 14.2304 15.6037 14.6824C16.6955 15.1344 17.6873 15.7976 18.522 16.634C19.3781 15.4291 19.8836 14.0106 19.9826 12.5359C20.0815 11.0612 19.77 9.58789 19.0825 8.27946C18.395 6.97102 17.3585 5.87862 16.088 5.12345C14.8174 4.36827 13.3625 3.97984 11.8846 4.00125C10.4067 4.02267 8.96366 4.45308 7.71552 5.24476C6.46738 6.03643 5.46296 7.1584 4.81369 8.4862C4.16442 9.814 3.89569 11.2957 4.03732 12.7669C4.17894 14.2382 4.72537 15.6414 5.616 16.821V16.82ZM12 13C10.9391 13 9.92172 12.5786 9.17157 11.8284C8.42143 11.0783 8 10.0609 8 9C8 7.93913 8.42143 6.92172 9.17157 6.17157C9.92172 5.42143 10.9391 5 12 5C13.0609 5 14.0783 5.42143 14.8284 6.17157C15.5786 6.92172 16 7.93913 16 9C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13ZM12 11C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9C14 8.46957 13.7893 7.96086 13.4142 7.58579C13.0391 7.21071 12.5304 7 12 7C11.4696 7 10.9609 7.21071 10.5858 7.58579C10.2107 7.96086 10 8.46957 10 9C10 9.53043 10.2107 10.0391 10.5858 10.4142C10.9609 10.7893 11.4696 11 12 11Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_87_16">
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>                    
+                </button>
+                <button type="button" class="hidden md:flex text-white flex items-center space-x-2 text-sm px-4 py-2 text-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_88_25)">
+                        <path d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875V15.875Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_88_25">
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>                    
+                </button>
+                <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white md:hidden focus:outline-none" aria-controls="navbar-dropdown" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+            </div>
+            </div>
+        </nav>  
+
+        <div>
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 py-6">
+                <h3 class="text-[#707070] normal text-xl">FedEx ® Tracking</h3>
+            </div>
+            <hr class="text-gray-200">
+
+            <div class="flex">
+                <div class="max-w-md mt-6 flex space-x-2 md:mx-auto mx-4 space-x-4 bg-white py-6">
+                    
+
+                    <div class="h-full">
+                        <img src="assets/track.svg" class="h-100" alt="">
+                        <!-- <svg width="98" class="h-100" height="" viewBox="0 0 98 904" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="33" width="32" height="904" rx="16" fill="#E3E3E3"/>
+                            <rect x="33" width="32" height="353" rx="16" fill="#4E148C"/>
+                            <circle cx="49" cy="27" r="6" fill="white"/>
+                            <circle cx="49" cy="177" r="6" fill="white"/>
+                            <circle cx="49" cy="327" r="6" fill="#8B8B8B"/>
+                            <circle cx="49" cy="477" r="6" fill="#8B8B8B"/>
+                            <circle cx="49" cy="627" r="6" fill="#8B8B8B"/>
+                            <circle cx="49" cy="777" r="6" fill="#8B8B8B"/>
+                            <rect y="294" width="98" height="98" rx="49" fill="#4E148C"/>
+                            <g clip-path="url(#clip0_110_44)">
+                            <path d="M49 365.867C42.9354 365.867 37.1192 363.458 32.8309 359.169C28.5425 354.881 26.1334 349.065 26.1334 343C26.1334 336.935 28.5425 331.119 32.8309 326.831C37.1192 322.543 42.9354 320.133 49 320.133C55.0646 320.133 60.8809 322.543 65.1692 326.831C69.4575 331.119 71.8667 336.935 71.8667 343C71.8667 349.065 69.4575 354.881 65.1692 359.169C60.8809 363.458 55.0646 365.867 49 365.867ZM49 369.133C55.931 369.133 62.5781 366.38 67.4791 361.479C72.38 356.578 75.1334 349.931 75.1334 343C75.1334 336.069 72.38 329.422 67.4791 324.521C62.5781 319.62 55.931 316.867 49 316.867C42.069 316.867 35.4219 319.62 30.521 324.521C25.62 329.422 22.8667 336.069 22.8667 343C22.8667 349.931 25.62 356.578 30.521 361.479C35.4219 366.38 42.069 369.133 49 369.133Z" fill="white"/>
+                            <path d="M58.7018 333.102C58.6785 333.124 58.6567 333.148 58.6365 333.174L47.2913 347.629L40.4542 340.788C39.9898 340.356 39.3755 340.12 38.7408 340.131C38.106 340.142 37.5005 340.399 37.0516 340.848C36.6027 341.297 36.3456 341.903 36.3344 342.538C36.3232 343.172 36.5588 343.787 36.9915 344.251L45.6351 352.898C45.868 353.13 46.1453 353.313 46.4504 353.436C46.7556 353.559 47.0824 353.62 47.4114 353.613C47.7403 353.607 48.0647 353.535 48.3651 353.401C48.6655 353.267 48.9358 353.073 49.1599 352.833L62.2004 336.532C62.6444 336.066 62.8872 335.444 62.8762 334.8C62.8653 334.156 62.6014 333.543 62.1418 333.092C61.6821 332.642 61.0636 332.39 60.4198 332.392C59.7761 332.394 59.159 332.649 58.7018 333.102Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_110_44">
+                            <rect width="52.2667" height="52.2667" fill="white" transform="translate(22.8667 316.867)"/>
+                            </clipPath>
+                            </defs>
+                        </svg> -->
+                    </div>
+
+
+                    <!-- <div class="w-4 h-full flex flex-col items-center justify-between rounded-lg bg-[#E3E3E3] py-6">
+                        
+                        <svg width="8" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="7" fill="#8B8B8B"/>
+                        </svg>
+                        <svg width="8" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="7" fill="#8B8B8B"/>
+                        </svg>
+                        <svg width="8" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="7" fill="#8B8B8B"/>
+                        </svg>   
+                        <svg width="8" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="7" fill="#8B8B8B"/>
+                        </svg>
+                        <svg width="8" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="7" fill="#8B8B8B"/>
+                        </svg>                         
+                    </div> -->
+                    
+                    <div class="space-y-4">
+                      <!-- From Section -->
+                      <div class=" pb-4">
+                        <p class="text-sm text-[#808080]">FROM</p>
+                        <p class="text-lg normal">TBILISI, GE</p>
+                        <p class="text-sm text-[#808080] normal mt-3 italic">Label Created</p>
+                        <p class="text-sm normal text-[#808080]">2025-03-13 3:09 AM</p>
+                      </div>
+                  
+                      <!-- We Have Your Package Section -->
+                      <div class=" pb-4">
+                        <p class="text-sm text-[#808080]">WE HAVE YOUR PACKAGE</p>
+                        <p class="text-lg normal">TBILISI GE</p>
+                        <p class="text-sm normal text-[#808080]">2025-03-13 10:13 AM</p>
+                      </div>
+                  
+                      <!-- On The Way Section -->
+                      <div class=" pb-6">
+                        <p class="text-sm text-[#808080]">ON THE WAY</p>
+                        <!-- <p class="text-lg font-semibold">TYLER, TX</p>
+                        <p class="text-sm text-gray-500">2025-03-19 8:27 AM</p> -->
+                      </div>
+                  
+                      <!-- Out for Delivery Section -->
+                      <div class=" pb-6">
+                        <p class="text-sm text-[#808080]">OUT FOR DELIVERY</p>
+                        <!-- <p class="text-lg font-semibold">TYLER, TX</p>
+                        <p class="text-sm text-gray-500">2025-03-19 8:58 AM</p> -->
+                      </div>
+                  
+                      <!-- Delivered Section -->
+                      <div>
+                        <p class="text-sm text-[#808080]">TO</p>
+                        <p class="text-lg normal text-[#808080]">NEW ADDRESS GOES HERE</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+
+            <hr class="text-gray-200 mt-8">
+
+            <div class="max-w-screen-xl  items-center justify-between mx-auto p-4 pt-12">
+                <h3 class="text-[#707070] normal text-2xl md:text-3xl">Watch list</h3>
+                <p class="text-center normal mt-4">You do not currently have any Watch list shipments.</p>
+            </div>
+
+
+            <div class="max-w-m mt-6 flex space-x-2 w-full space-x-4 bg-white pt-6 bg-[#FBFAFB]">
+                <footer class="w-full bg-[#FBFAFB]">
+                <div class="mx-auto w-full max-w-screen-xl">
+                    <div class="grid grid-cols-1 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-[#4d148c] uppercase">Our Company</h2>
+                        <ul class="text-[#707070] text-xs normal">
+                            <li class="mb-2">
+                                <a href="#" class=" hover:underline">About FedEx</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Why Choose FedEx</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Investor Relations</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Sustainability</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Corporate Responsibility</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Global Newsroom</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Careers at FedEx</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-[#4d148c] uppercase">Support</h2>
+                        <ul class="text-[#707070] text-xs normal">
+                            <li class="mb-2">
+                                <a href="#" class=" hover:underline">Contact Us</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">FAQs</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Accessibility Plan</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-[#4d148c] uppercase">More From FedEx</h2>
+                        <ul class="text-[#707070] text-xs normal">
+                            <li class="mb-2">
+                                <a href="#" class=" hover:underline">FedEx Developer Portal</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Service Guides</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Fuel Surcharge</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Regulatory News & Information</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">FedEx Trade Networks</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Privacy Code</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Internet Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-[#4d148c] uppercase">Preferences</h2>
+                        <ul class="text-[#707070] text-xs normal">
+                            <li class="mb-2">
+                                <a href="#" class="flex space-x-2 items-center hover:underline">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22M12 2C9.49872 4.73835 8.07725 8.29203 8 12C8.07725 15.708 9.49872 19.2616 12 22M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22M2.50002 9H21.5M2.5 15H21.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                    <p>Canada</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr class="text-gray-200">
+
+                <div class="mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+                    <div class="flex space-x-4 items-center">
+                        <h2 class="text-sm font-semibold text-[#4d148c] uppercase">Follow FedEx</h2>
+                        <div class="flex space-x-2">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.916758" y="0.372569" width="23.0993" height="23.0993" rx="11.5496" stroke="black" stroke-width="0.745138"/>
+                                <g clip-path="url(#clip0_119_126)">
+                                <path d="M6.41263 6.33398H19.2673C19.4567 6.33398 19.6383 6.39941 19.7722 6.51587C19.9062 6.63233 19.9814 6.79028 19.9814 6.95498V16.8909C19.9814 17.0556 19.9062 17.2136 19.7722 17.33C19.6383 17.4465 19.4567 17.5119 19.2673 17.5119H6.41263C6.22323 17.5119 6.04158 17.4465 5.90765 17.33C5.77373 17.2136 5.69849 17.0556 5.69849 16.8909V6.95498C5.69849 6.79028 5.77373 6.63233 5.90765 6.51587C6.04158 6.39941 6.22323 6.33398 6.41263 6.33398V6.33398ZM18.5531 8.96577L12.8914 13.3748L7.12678 8.95211V16.2699H18.5531V8.96577ZM7.49171 7.57598L12.8835 11.7131L18.1975 7.57598H7.49171Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_119_126">
+                                <rect width="17.1395" height="14.9039" fill="white" transform="translate(4.27002 4.47095)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>                                                              
+                            
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.372569" y="0.372569" width="23.0993" height="23.0993" rx="11.5496" stroke="black" stroke-width="0.745138"/>
+                                <g clip-path="url(#clip0_119_101)">
+                                <path d="M13.164 12.8538H14.7164L15.3373 10.37H13.164V9.12811C13.164 8.48853 13.164 7.88621 14.4059 7.88621H15.3373V5.79982C15.1349 5.77312 14.3705 5.71289 13.5633 5.71289C11.8774 5.71289 10.6802 6.7418 10.6802 8.63135V10.37H8.81738V12.8538H10.6802V18.1319H13.164V12.8538Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_119_101">
+                                <rect width="14.9028" height="14.9028" fill="white" transform="translate(4.4707 4.47095)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.508555" y="0.372569" width="23.0993" height="23.0993" rx="11.5496" stroke="black" stroke-width="0.745138"/>
+                                    <g clip-path="url(#clip0_119_102)">
+                                    <mask id="mask0_119_102" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="5" width="12" height="13">
+                                    <path d="M17.757 5.96118H6.09717V17.8834H17.757V5.96118Z" fill="white"/>
+                                    </mask>
+                                    <g mask="url(#mask0_119_102)">
+                                    <path d="M13.0364 11.0068L17.377 5.96118H16.3484L12.5794 10.3422L9.56916 5.96118H6.09717L10.6493 12.5861L6.09717 17.8773H7.12582L11.106 13.2507L14.285 17.8773H17.757L13.0361 11.0068H13.0364ZM11.6275 12.6445L11.1663 11.9848L7.49646 6.73554H9.07641L12.038 10.9719L12.4992 11.6316L16.3489 17.1381H14.769L11.6275 12.6447V12.6445Z" fill="black"/>
+                                    </g>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_119_102">
+                                    <rect width="11.6599" height="11.9222" fill="white" transform="translate(6.09717 5.96118)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+
+                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.644786" y="0.372569" width="23.0993" height="23.0993" rx="11.5496" stroke="black" stroke-width="0.745138"/>
+                                        <g clip-path="url(#clip0_119_114)">
+                                        <path d="M18.1203 8.50572C18.4041 9.61225 18.4041 11.9222 18.4041 11.9222C18.4041 11.9222 18.4041 14.2321 18.1203 15.3386C17.9626 15.9503 17.5012 16.4315 16.9169 16.5942C15.8557 16.8898 12.1946 16.8898 12.1946 16.8898C12.1946 16.8898 8.53534 16.8898 7.47228 16.5942C6.88548 16.429 6.42474 15.9484 6.26888 15.3386C5.98511 14.2321 5.98511 11.9222 5.98511 11.9222C5.98511 11.9222 5.98511 9.61225 6.26888 8.50572C6.4266 7.89408 6.88797 7.41285 7.47228 7.25016C8.53534 6.95459 12.1946 6.95459 12.1946 6.95459C12.1946 6.95459 15.8557 6.95459 16.9169 7.25016C17.5037 7.41533 17.9644 7.89595 18.1203 8.50572V8.50572ZM10.9527 14.0955L14.6784 11.9222L10.9527 9.74886V14.0955Z" fill="black"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_119_114">
+                                        <rect width="14.9028" height="14.9028" fill="white" transform="translate(4.74316 4.47095)"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.780772" y="0.372569" width="23.0993" height="23.0993" rx="11.5496" stroke="black" stroke-width="0.745138"/>
+                                            <g clip-path="url(#clip0_119_121)">
+                                            <path d="M9.18814 7.57577C9.18797 7.90514 9.05697 8.22096 8.82396 8.45374C8.59094 8.68653 8.27499 8.81721 7.94562 8.81705C7.61625 8.81688 7.30043 8.68588 7.06765 8.45286C6.83487 8.21985 6.70418 7.9039 6.70435 7.57453C6.70451 7.24516 6.83551 6.92934 7.06853 6.69656C7.30155 6.46377 7.61749 6.33309 7.94686 6.33325C8.27623 6.33342 8.59205 6.46442 8.82483 6.69743C9.05762 6.93045 9.1883 7.2464 9.18814 7.57577V7.57577ZM9.2254 9.73667H6.7416V17.5109H9.2254V9.73667ZM13.1498 9.73667H10.6784V17.5109H13.1249V13.4313C13.1249 11.1586 16.0869 10.9475 16.0869 13.4313V17.5109H18.5396V12.5868C18.5396 8.75557 14.1557 8.89839 13.1249 10.7799L13.1498 9.73667V9.73667Z" fill="black"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_119_121">
+                                            <rect width="14.9028" height="14.9028" fill="white" transform="translate(4.87891 4.47095)"/>
+                                            </clipPath>
+                                            </defs>
+                                            </svg>
+                                            
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+                <div class="px-4 py-6 mt-5 bg-[#4D148C] md:flex md:items-center md:justify-between">
+                    <span class="text-xs text-white sm:text-center normal">© FedEx 1995-2025
+                    </span>
+                    <span class="text-xs text-white sm:text-center normal">Feedback Site Map | Terms of Use
+                    </span>
+                </div>
+                </footer>
+
+            </div>
+            
+        </div>
+
+
+
+        
+  </body>
 </html>
